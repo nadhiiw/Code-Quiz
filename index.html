@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- the header of the page -->
+    <div class="header">JavaScript Quiz</div>
+   <div class="start_btn"><button id="start-btn">Start Quiz</button></div>
+   <div id="countdown" class="timer"></div>
+   <div class="infro_box hide" id="info_box">
+    <div class="info_title">
+       <span>Some Rules of this Quiz</span>
+    </div>
+    <!-- rule of the quiz -->
+   <div class="info_list">
+       <div class="info">1. You will have only <span>120 seconds</span> per each question.</div>
+       <div class="info">2. Select your answer</div>
+       <div class="info">3. If you select wrong answer, you will lose 5 second of the time</div>
+       <div class="info">4. You can't exit from the Quiz while you start</div>
+       <div class="info">5. You'll get points based on your correct answers</div>
+   </div>
+   <div class="buttons">
+       <button class="restart">Continue</button>
+   </div>
+   </div>
+   <!-- create of the quiz -->
+   <div class="quiz_box hide">
+       <div id="quiz"></div>
+       <button id="submit"></button>
+       <div id="score"></div>
+   </div>
+  <script src="assets/css/js/scripts.js"></script>
+</body>
+</html>
