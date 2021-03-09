@@ -10,21 +10,23 @@ var quizBox = document.querySelector('.quiz_box')
 var questionIndex = 0;
 var totalScore =0;
 
+
 // create the button where you click on the page
 conButton.addEventListener('click', setTime)
 startButton.addEventListener('click', startGame);
+
 
 // where to the start the quiz create the function 
 function startGame(){
 console.log('Started');
 startButton.classList.add('hide');
 rulesContainer.classList.remove('hide');
-
 }
 
 
+
 // create the time 
-var secondsLeft = 120;
+var secondsLeft = 40;
 
 function setTime() {
   // Sets interval in variable
@@ -49,7 +51,7 @@ function showQuestion(){
     var title = document.createElement('h1');
     title.textContent = currentQuestion.question;
     quizContainer.append(title);
-
+    
     currentQuestion.answer.forEach(function(answer){
         var button = document.createElement('button');
         button.classList.add('answer')
@@ -59,8 +61,6 @@ function showQuestion(){
         quizContainer.append(button);
 
     })
-    chooseNextScreen();
-    
 }
 
 
@@ -70,13 +70,15 @@ function answerCheck(){
         console.log('wrong')
         secondsLeft-=5;
     }else{
-        console.log('corret')
+        console.log('correct')
     }
     totalScore = 0;
     questionIndex++;
     showQuestion();
 
 }
+
+
 
 // create the question 
 var myQuestions = [
